@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-ASSISTED PNEUMONIA DIAGNOSTICS</title>
+
+     <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/custom.css">
+
+</head>
+<body>
+    <div class="container" style="width: 100%; text-align: center;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a href="" class="navbar-brand">AI-X</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#methodology" class="nav-item nav-link">Methodology</a>
+                        <a href="#accuracy" class="nav-item nav-link">Model Accuracy</a>
+                        <a href="#report" class="nav-item nav-link">Report</a>
+                        <a href="#about" class="nav-item nav-link">About us</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </div>  
+
+    <a name="home">
+        <div class="container" style="width: 100%; text-align: center; padding-top: 58px;">
+            <div class="row" style="text-align: center;">
+                <div class="header" style="width: 100%;">
+                    <h2>AI-ASSISTED PNEUMONIA DIAGNOSTICS</h2>
+                    <h4>Application of Convolutional Neural Networks for X-Ray Image Processing</h4>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="container">
+    <div class="row" style="background-color: darkred;">
+        <div class="col-lg-12 col-sm-12" style="text-align: right; color:white">
+            <h4>PATIENT DATA INPUT</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-sm-12" style="width: 20%;">
+            <div class="row">
+                <div class="col-sm-12" style="text-align: left;">
+                    <p>Provide x-ray image for analysis:<br></p>
+                    <form method="post" action="/" enctype="multipart/form-data">
+                        <dl>
+                            <p>
+                                <input type="file" name="file" autocomplete="off" required>
+                            </p>
+                        </dl>
+                        <p>
+                            <input type="submit" value="Submit">
+                        </p>
+                    </form>     
+                </div>
+                {% if filename %}
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                    <div class="col-sm-12" style="text-align: center; padding: 5px; vertical-align: middle;">
+                        <br>
+                    <h5>DIAGNOSIS</h5>
+                    <p>Pneumonia</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                    <div class="col-sm-12" style="text-align: center; padding: 5px; vertical-align: middle;">
+                        
+                            <p> Accuracy of the NN algorithm: ...%</p>
+                        
+                    </div>
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+            {% if filename %}
+                <div style="padding-top: 10px; padding-bottom: 10px;">
+                    <img src="{{ url_for('display_image', filename=filename) }}" style="width: 50%;">
+                </div>
+            {% endif %}<a name="methodology"></a>
+        </div>
+    </div> 
+    <div class="row" style="background-color: darkred;">
+        <div class="col-lg-12" style="text-align: right; color:white">
+             <h4>METHODOLOGY</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="text-align: left">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ullam, nesciunt error earum quo culpa nemo similique quam perferendis autem fugit nihil ducimus ea molestias? Molestiae sunt ullam ipsum velit.</p>
+        </div>
+    </div><a name="accuracy"> </a>
+    <div class="row" style="background-color: darkred;">
+        <div class="col-lg-12" style="text-align: right; color:white">
+            <h4>MODEL ACCURACY</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="text-align: left;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ullam, nesciunt error earum quo culpa nemo similique quam perferendis autem fugit nihil ducimus ea molestias? Molestiae sunt ullam ipsum velit.</p>
+        </div>
+    </div><a name="report"> </a>
+    <div class="row" style="background-color: darkred;">
+        <div class="col-lg-12" style="text-align: right; color:white">
+            <h4>REPORT</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="text-align: left;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ullam, nesciunt error earum quo culpa nemo similique quam perferendis autem fugit nihil ducimus ea molestias? Molestiae sunt ullam ipsum velit.</p>
+        </div>
+    </div><a name="about"> </a>
+    <div class="row" style="background-color: darkred;">
+        <div class="col-lg-12" style="text-align: right; color:white">
+            <h4>ABOUT US</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="text-align: left;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ullam, nesciunt error earum quo culpa nemo similique quam perferendis autem fugit nihil ducimus ea molestias? Molestiae sunt ullam ipsum velit.</p>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+</body>
+</html>
