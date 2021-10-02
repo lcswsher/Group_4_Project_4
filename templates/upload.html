@@ -71,15 +71,19 @@
                     </div>
                     <div class="col-sm-12" style="text-align: center; padding: 5px; vertical-align: middle;">
                         <br>
-                    <h5>DIAGNOSIS</h5>
-                    <p>Pneumonia</p>
+                        <h5>DIAGNOSIS</h5>
+                        {% if result == 1 %}
+                            <strong style="color: white; background-color: darkred;">PNEUMONIA</strong>
+                        {% elif result == 0 %}
+                            <strong style="color: white; background-color: darkgreen;"">HEALTHY</strong>
+                        {% endif %}
                     </div>
                     <div class="col-sm-12">
                         <hr>
                     </div>
                     <div class="col-sm-12" style="text-align: center; padding: 5px; vertical-align: middle;">
                         
-                            <p> Accuracy of the NN algorithm: ...%</p>
+                            <a name="methodology"><p> Accuracy of the NN algorithm: ...%</p></a>
                         
                     </div>
                     <div class="col-sm-12">
@@ -93,7 +97,7 @@
                 <div style="padding-top: 10px; padding-bottom: 10px;">
                     <img src="{{ url_for('display_image', filename=filename) }}" style="width: 50%;">
                 </div>
-            {% endif %}<a name="methodology"></a>
+            {% endif %}
         </div>
     </div> 
     <div class="row" style="background-color: darkred;">
