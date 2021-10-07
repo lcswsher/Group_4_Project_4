@@ -35,7 +35,7 @@ def upload_image():
 
 		#-------------------------- PROCESSING UPLOADED X-RAY IMAGE
 		# load the model
-		model = load_model("input/chest_xray.h5")
+		model = load_model("input/chest_xray_100_Epochs.h5")
 
 		# load and scale the image
 		img=image.load_img(os.path.join(app.config['UPLOAD_FOLDER'], filename),target_size=(224,224))
@@ -53,7 +53,7 @@ def upload_image():
 		classes=model.predict(img_data)
 
 		# classes
-		result=int(classes[0][0])
+		result=int(classes[0][1])
 
 		# if result==0:
 		#     print("X-Ray results indicate Pneumonia")
