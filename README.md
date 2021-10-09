@@ -90,7 +90,7 @@ As with any CNN model, the above model predictions are not always accurate. Conf
 
 During the model testing phase (624 test images), the most optimal CNN model was generated while using ~1-30 epochs cycles. Model accuracy declines significantly after 50 plus epoch cycles due to overfitting
 
-<center><img src="static/images/cm_mx.png" alt="Confusion matrix and accuracy calculation" style="width:30%;" />    <img src="static/images/cm.png" alt="Confusion matrix and accuracy calculation" style="width:30%;" />
+<center><img src="static/images/cm_mx.png" alt="Confusion matrix and accuracy calculation" style="width:30%;" /> <img src="static/images/cm.png" alt="Confusion matrix and accuracy calculation" style="width:30%;" />
 
 <center><a name="cm">Figure 3.</a> Confusion matrix & accuracy calculation</center>
 
@@ -124,7 +124,7 @@ Frontend was implemented via Flask, to enable X-ray image upload by users.
 To run the tool user needs to run `python main.py` from the project folder after cloning and then proceed to the local host listed withing the git Bash stdo window.
 
 <center>
-    <img src="static/images/small_screen_frontend.png" alt="img" style="height:600px" />        <img src="static/images/large_screen_frontend.png" alt="img" style="height:600px" />
+    <img src="static/images/small_screen_frontend.png" alt="img" style="height:400px" />        <img src="static/images/large_screen_frontend.png" alt="img" style="height:400px" />
 </center>
 
 ## Contributors
