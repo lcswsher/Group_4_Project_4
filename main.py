@@ -36,6 +36,7 @@ def upload_image():
 		#-------------------------- PROCESSING UPLOADED X-RAY IMAGE
 		# load the model
 		model = load_model("input/chest_xray.h5")
+		# model = load_model("input/chest_xray_30_Epochs.h5")
 
 		# load and scale the image
 		img=image.load_img(os.path.join(app.config['UPLOAD_FOLDER'], filename),target_size=(224,224))

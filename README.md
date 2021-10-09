@@ -1,6 +1,6 @@
 # Convolutional Neural Networks:<br>Machine Learning and Pneumonia
 
-In this project we have developed, trained and evaluated a convolutional neural network model which can be used by physicians for pneumonia diagnostics based on X_ray image processing.
+In this project we have developed, trained and evaluated a convolutional neural network model (VGG16) which can be used by physicians for pneumonia diagnostics based on X_ray image processing.
 
 ## Project motivation
 
@@ -30,7 +30,7 @@ For the analysis of chest x-ray images, all chest radiographs were initially scr
 
 ## Model Construction, Testing & Optimization
 
-
+This CNN model is from the Keras library and was trained and fitted using publicly available x-ray images provided in Kaggle: 5,216 chest x-ray images (1,341 negative, 3,875 positive). In addition, the model was trained at various epoch stages while monitoring for the most optimal accuracy scores for both precision and recall. 
 
 <table style="border: 3px solid white;">
     <tr style="vertical-align:top">
@@ -84,6 +84,16 @@ For the analysis of chest x-ray images, all chest radiographs were initially scr
 
 <center><a name="workflow">Figure 2.</a> Data Model Implementation</center>
 
+### Model Accuracy
+
+As with any CNN model, the above model predictions are not always accurate. Confusion matrix containing corresponding TP, TN, FP & FN counts is shown in [Figure 3](#cm). Model training accuracy is 92%, with less favorable testing accuracy scores of 62% precision and 67% recall.
+
+During the model testing phase (624 test images), the most optimal CNN model was generated while using ~1-30 epochs cycles. Model accuracy declines significantly after 50 plus epoch cycles due to overfitting
+
+<img src="static/images/cm.png" alt="Confusion matrix and accuracy calculation" style="zoom:80%;" />
+
+<center><a name="cm">Figure 3.</a> Confusion matrix & accuracy calculation</center>
+
 ### Data Model Optimization:
 
 * Training the model to be more accurate at predictions required several steps
@@ -99,13 +109,13 @@ For the analysis of chest x-ray images, all chest radiographs were initially scr
 
   ![Model loss stats](static\images\loss.png)
 
-  <center><a name="loss">Figure 3.</a> Change in time (epochs) of the training vs validation loss<br>of the developed model</center>
+  <center><a name="loss">Figure 4.</a> Change in time (epochs) of the training vs validation loss<br>of the developed model</center>
 
   ![Model loss stats](static\images\accuracy.png)
 
   
 
-  <center><a name="accuracy">Figure 4.</a> Change in time (epochs) of the training vs validation accuracy<br>of the developed model</center>
+  <center><a name="accuracy">Figure 5.</a> Change in time (epochs) of the training vs validation accuracy<br>of the developed model</center>
 
   
 
