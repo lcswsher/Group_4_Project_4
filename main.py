@@ -42,20 +42,20 @@ def upload_image():
 
 		# convert image to array
 		x=image.img_to_array(img)
-
-		# ? 
+		
+		# reshape 
 		x=np.expand_dims(x, axis=0)
 
-		# ?
+		# preprocessing
 		img_data=preprocess_input(x)
 
-		# ?
+		# run model prediction
 		classes=model.predict(img_data)
 
-		# classes
+		# assign class based the prediction result
 		result=int(classes[0][1])
 
-		# if result==0:
+		# if result==1:
 		#     print("X-Ray results indicate Pneumonia")
 		# else:
 		#     print("X-Ray results are Normal")
@@ -65,10 +65,10 @@ def upload_image():
 		flash('Allowed image types are -> png, jpg, jpeg, gif')
 		return redirect(request.url)
 
-@app.route('/display/<filename>')
-def display_image(filename):
-	#print('display_image filename: ' + filename)
-	return redirect(url_for('static', filename='img/' + filename), code=301)
+# @app.route('/display/<filename>')
+# def display_image(filename):
+# 	#print('display_image filename: ' + filename)
+# 	return redirect(url_for('static', filename='img/' + filename), code=301)
 
 if __name__ == "__main__":
     app.run()
