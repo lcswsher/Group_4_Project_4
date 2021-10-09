@@ -107,11 +107,11 @@ During the model testing phase (624 test images), the most optimal CNN model was
 
 * Created a confusion matrix to determine true positive/negative and false positive/negative values
 
-  ![Model loss stats](static\images\loss.png)
+  ![Model loss stats](static/images/loss.png)
 
   <center><a name="loss">Figure 4.</a> Change in time (epochs) of the training vs validation loss<br>of the developed model</center>
 
-  ![Model loss stats](static\images\accuracy.png)
+  ![Model loss stats](static/images/accuracy.png)
 
   
 
