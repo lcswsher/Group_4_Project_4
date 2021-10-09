@@ -124,7 +124,7 @@
                                    </div>
                                    <div class="col-sm-12" style="text-align: center; padding: 5px; vertical-align: middle;">
                                    
-                                        <a name="methodology"><p> Accuracy of the CNN algorithm: 93%</p></a>
+                                        <a name="methodology"><p> Accuracy of the CNN algorithm: 92%</p></a>
                                    
                                    </div>
                                    <div class="col-sm-12">
@@ -152,8 +152,13 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp">Methodology</h2>
                               <div class="wow fadeInUp">
-                                   <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
-                                   <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+                                   <p>This is a pneumonia detection tool and was developed using a convolutional neural (CNN/vgg16) network architecture used
+                                   for deep learning. The tool recognizes x-ray patterns from an uploaded image file computing either a positive or
+                                   negative result for pneumonia.</p>
+                                   <p>This CNN model is from the Keras library and was trained and fitted using publicly available x-ray images provided in
+                                   Kaggle: 5,216 chest x-ray images (1,341 negative, 3,875 positive). In addition, the model was trained at various epoch
+                                   stages while monitoring for the most optimal accuracy scores for both precision and recall. Kaggle resource for x-ray
+                                   data images: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia</p>
                               </div>
                          </div>
                     </div>
@@ -170,8 +175,10 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp">Model Accuracy</h2>
                               <div class="wow fadeInUp">
-                                   <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
-                                   <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+                                   <p>As with any CNN model, the above model predictions are not always accurate. Model training accuracy is 92%, with less
+                                   favorable testing accuracy scores of 62% precision and 67% recall.</p>
+                                   <p>During the model testing phase (624 test images), the most optimal CNN model was generated while using ~1-30 epochs
+                                   cycles. Model accuracy declines significantly after 50 plus epoch cycles due to overfitting</p>
                               </div>
                          </div>
                     </div>
@@ -188,8 +195,9 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s">Report</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
-                                   <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+                                   <p>The report predicts x-ray images as either negative (0) or positive (1) for pneumonia. A trained hdf5 model file
+                                   containing weights for each layer, is compared against an uploaded “test” x-ray file using the above screen. Once the
+                                   report is submitted, a negative or positive prediction is displayed.</p>
                               </div>
                          </div>
                     </div>
