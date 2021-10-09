@@ -121,7 +121,7 @@ During the model testing phase (624 test images), the most optimal CNN model was
 
 Frontend was implemented via Flask, to enable X-ray image upload by users.
 
-To run the tool user needs to run `python main.py` from the project folder after cloning and then proceed to the local host listed withing the git Bash stdo window.
+To run the tool user needs to run `python main.py` from the project folder after cloning and then proceed to the local host listed within the git Bash stdo window.
 
 <center>
     <img src="static/images/small_screen_frontend.png" alt="img" style="height:400px" />        <img src="static/images/large_screen_frontend.png" alt="img" style="height:400px" />
