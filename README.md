@@ -30,7 +30,7 @@ For the analysis of chest x-ray images, all chest radiographs were initially scr
 
 ## Model Construction, Testing & Optimization
 
-This CNN model is from the Keras library and was trained and fitted using publicly available x-ray images provided in Kaggle: 5,216 chest x-ray images (1,341 negative, 3,875 positive). In addition, the model was trained at various epoch stages while monitoring for the most optimal accuracy scores for both precision and recall. 
+This CNN model is from the Keras library and was trained and fitted using publicly available x-ray images provided in Kaggle: 5,216 chest x-ray images (1,341 negative, 3,875 positive). In addition, the model was trained at various epoch stages while monitoring for the most optimal accuracy scores for both precision and recall. Final notebook (developed using Google Collab) can be found [here](https://github.com/lcswsher/Group_4_Project_4/blob/main/CNN_Group4_Project4__30_Epochs.ipynb), with the corresponding model saved into an [chest_xray_30_Epochs.h5](https://github.com/lcswsher/Group_4_Project_4/blob/main/input/chest_xray_30_Epochs.h5) file.
 
 <table style="border: 3px solid white;">
     <tr style="vertical-align:top">
@@ -90,7 +90,7 @@ As with any CNN model, the above model predictions are not always accurate. Conf
 
 During the model testing phase (624 test images), the most optimal CNN model was generated while using ~1-30 epochs cycles. Model accuracy declines significantly after 50 plus epoch cycles due to overfitting
 
-<img src="static/images/cm.png" alt="Confusion matrix and accuracy calculation" style="zoom:80%;" />
+<center><img src="static/images/cm_mx.png" alt="Confusion matrix and accuracy calculation" style="width:30%;" />    <img src="static/images/cm.png" alt="Confusion matrix and accuracy calculation" style="width:30%;" />
 
 <center><a name="cm">Figure 3.</a> Confusion matrix & accuracy calculation</center>
 
@@ -117,7 +117,15 @@ During the model testing phase (624 test images), the most optimal CNN model was
 
   <center><a name="accuracy">Figure 5.</a> Change in time (epochs) of the training vs validation accuracy<br>of the developed model</center>
 
-  
+## Frontend & deployment
+
+Frontend was implemented via Flask, to enable X-ray image upload by users.
+
+To run the tool user needs to run `python main.py` from the project folder after cloning and then proceed to the local host listed withing the git Bash stdo window.
+
+<center>
+    <img src="static/images/small_screen_frontend.png" alt="img" style="height:600px" />        <img src="static/images/large_screen_frontend.png" alt="img" style="height:600px" />
+</center>
 
 ## Contributors
 
